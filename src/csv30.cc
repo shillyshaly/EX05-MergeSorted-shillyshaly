@@ -13,5 +13,8 @@
 using std::vector;
 
 vector<int> merge_sorted(vector<int> a, vector<int>b) {
-    // put your code here for this assignment
+    vector<int> merged;
+    for(idxA = 0, idxB = 0; idxA < a.size() || idxB < b.size(); ){
+        (idxA <= idxB) ? (merged.push_back(a[idxA]), idxA++) : (merged.push_back(b[idxB]), ++idxB);
+    }
 }
